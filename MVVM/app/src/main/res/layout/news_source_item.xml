@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="source" type="com.example.mvvm.model.NewsSource"/>
+        <variable name="itemClickListener" type="android.view.View.OnClickListener"/>
+    </data>
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:clickable="true"
+            android:onClick="@{itemClickListener}"
+            android:background="?android:attr/selectableItemBackground"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/name"
+                android:text="@{`name: ` + source.name}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            tools:text="test"/>
+        <TextView
+                android:id="@+id/description"
+                android:text="@{`description: ` + source.description}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:id="@+id/url"
+                android:text="@{`url: ` + source.url}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:id="@+id/category"
+                android:text="@{`category: ` + source.category}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:id="@+id/language"
+                android:text="@{`language: ` + source.language}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:id="@+id/country"
+                android:text="@{`country: ` + source.country}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</layout>
