@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ImagePicker</string>
+
+    <string name="album_name_all">全てのメディア</string>
+    <string name="button_preview">プレビュー</string>
+    <string name="button_apply_default">決定</string>
+    <string name="button_apply">決定 (%1$d)</string>
+    <string name="button_back">戻る</string>
+    <string name="photo_grid_capture">カメラ</string>
+    <string name="empty_text">メディアがありません</string>
+    <string name="button_ok">OK</string>
+    <string name="error_under_quality">Under quality</string>
+    <string name="error_over_quality">Over quality</string>
+    <string name="error_file_type">サポートしていないファイルタイプです。</string>
+    <string name="error_type_conflict">画像と動画は同時に選択することができません。</string>
+    <string name="error_no_video_activity">ビデオプレビューが利用できません。</string>
+    <string name="error_over_original_size">%1$dMBより大きなファイルは選択できません。</string>
+    <string name="error_over_original_count">%1$d枚の画像が%2$dMBをこえています。オリジナルのチェックを外してください。</string>
+    <string name="button_original">オリジナル</string>
+    <string name="button_sure_default">確定</string>
+    <string name="button_sure">確定 (%1$d)</string>
+    <string name="title_activity_base_preview">BasePreviewActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
