@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable
 import android.support.v7.widget.RecyclerView
 import android.text.format.DateUtils
 import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
@@ -13,6 +14,7 @@ import jp.co.sgnet.mediaPicker.R
 import jp.co.sgnet.mediaPicker.databinding.MediaGridContentBinding
 import jp.co.sgnet.mediaPicker.internal.entity.Item
 import jp.co.sgnet.mediaPicker.internal.entity.SelectionSpec
+import java.util.logging.Logger
 
 class MediaGrid: SquareFrameLayout, View.OnClickListener {
     private lateinit var media: Item
@@ -64,6 +66,7 @@ class MediaGrid: SquareFrameLayout, View.OnClickListener {
         if (media.isVideo()) {
             binding.videoDuration.visibility = VISIBLE
             binding.videoDuration.text = DateUtils.formatElapsedTime(media.duration/ 1000)
+            Log.d("", "" + media.duration)
         } else {
             binding.videoDuration.visibility = GONE
         }
@@ -74,7 +77,7 @@ class MediaGrid: SquareFrameLayout, View.OnClickListener {
     }
 
     data class BindInfo(val resize: Int,
-                        val placeholder: Drawable,
+                        val placeholder: Drawable?,
                         val checkViewCountable: Boolean,
                         val viewHolder: RecyclerView.ViewHolder)
 }

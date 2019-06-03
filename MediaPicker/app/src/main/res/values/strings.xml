@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ImagePicker</string>
+    <string name="app_name">MediaPicker</string>
 
     <string name="album_name_all">全てのメディア</string>
     <string name="button_preview">プレビュー</string>

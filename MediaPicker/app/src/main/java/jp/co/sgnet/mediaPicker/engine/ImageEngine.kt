@@ -16,7 +16,7 @@ interface ImageEngine {
      * @param imageView   ImageView widget
      * @param uri         Uri of the loaded image
      */
-    fun loadThumbnail(context: Context, resize: Int, placeholder: Drawable, imageView: ImageView, uri: Uri)
+    fun loadThumbnail(context: Context, resize: Int, placeholder: Drawable?, imageView: ImageView, uri: Uri)
 
     /**
      * Load thumbnail of a gif image resource. You don't have to load an animated gif when it's only

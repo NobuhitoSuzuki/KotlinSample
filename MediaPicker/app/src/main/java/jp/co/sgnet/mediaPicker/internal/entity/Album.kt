@@ -1,7 +1,10 @@
 package jp.co.sgnet.mediaPicker.internal.entitydata
 
+import android.database.Cursor
 import android.os.Parcel
 import android.os.Parcelable
+import android.provider.MediaStore
+import jp.co.sgnet.mediaPicker.internal.loader.AlbumLoader
 
 data class Album(val id: String,
                  val coverPath: String,
@@ -42,6 +45,13 @@ data class Album(val id: String,
         }
         const val ALBUM_ID_ALL = (-1).toString()
         const val ALBUM_NAME_ALL = "All"
+
+        fun valueOf(cursor: Cursor): Album {
+            return Album(cursor.getString(cursor.getColumnIndex("bucket_id")),
+                cursor.getString(cursor.getColumnIndex(MediaStore.MediaColumns.DATA)),
+                cursor.getString(cursor.getColumnIndex("bucket_display_name")),
+                cursor.getLong(cursor.getColumnIndex(AlbumLoader.COLUMN_COUNT)))
+        }
     }
 
 

@@ -13,6 +13,7 @@ class AlbumLoader(context: Context,
                   selection: String?,
                   selectionArgs: Array<out String>?)
     : CursorLoader(context, QUERY_URI, PROJECTION, selection, selectionArgs, BUCKET_ORDER_BY) {
+
     override fun loadInBackground(): Cursor? {
         val albums = super.loadInBackground()
         val allAlbum = MatrixCursor(COLUMNS)

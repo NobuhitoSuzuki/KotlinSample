@@ -15,6 +15,7 @@ class AlbumMediaLoader(context: Context,
                        selection: String?,
                        selectionArgs: Array<out String>?,
                        private val enableCapture: Boolean) : CursorLoader(context, QUERY_URI, PROJECTION, selection, selectionArgs, ORDER_BY) {
+
     override fun loadInBackground(): Cursor? {
         val result = super.loadInBackground()
         if (!enableCapture || !MediaStoreCompat.hasCameraFeature(context)) {
